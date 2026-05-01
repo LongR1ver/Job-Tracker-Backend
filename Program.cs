@@ -1,4 +1,6 @@
 using Job_Application_Web.Data;
+using Job_Application_Web.Services;
+using Job_Application_Web.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +25,8 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod();
     });
 });
+
+builder.Services.AddScoped<IApplicationGroupService, ApplicationGroupService>();
 
 var app = builder.Build();
 

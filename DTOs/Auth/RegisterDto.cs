@@ -12,7 +12,7 @@ namespace Job_Application_Web.DTOs.Auth
         public string Username { get; set; } = null!;
 
         [Required]
-        [MinLength(6)]
+        [MinLength(8)]
         public string Password { get; set; } = null!;
     }
 }
