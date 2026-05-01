@@ -10,8 +10,10 @@ namespace Job_Application_Web.Models
         public JobApplication JobApplication { get; set; } = null!;
 
         public DateTime ReminderDateTime { get; set; }
+
         [Required]
         public string Message { get; set; } = null!;
+
         public bool IsCompleted { get; set; } = false;
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;

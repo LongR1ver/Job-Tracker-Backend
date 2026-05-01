@@ -8,7 +8,6 @@ namespace Job_Application_Web.Models
         public Guid Id { get; set; }
 
         public Guid JobApplicationId { get; set; }
-        [Required]
         public JobApplication JobApplication { get; set; } = null!;
 
         public ApplicationStatus OldStatus { get; set; }
