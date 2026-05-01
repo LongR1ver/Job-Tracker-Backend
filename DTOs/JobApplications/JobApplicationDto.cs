@@ -6,6 +6,7 @@ namespace Job_Application_Web.DTOs.JobApplications
     public class JobApplicationDto
     {
         public Guid Id { get; set; }
+
         public Guid? ApplicationGroupId { get; set; }
         public string? ApplicationGroupName { get; set; }
 
@@ -17,8 +18,9 @@ namespace Job_Application_Web.DTOs.JobApplications
         public string CompanyName { get; set; } = null!;
         [Required]
         public string JobTitle { get; set; } = null!;
+        [Required]
+        public string JobDescription { get; set; } = null!;
 
-        public string? JobDescription { get; set; }
         public string? Location { get; set; }
         public string? Notes { get; set; }
 

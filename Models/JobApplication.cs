@@ -21,7 +21,9 @@ namespace Job_Application_Web.Models
         public string CompanyName { get; set; } = null!;
         [Required]
         public string JobTitle { get; set; } = null!;
-        public string? JobDescription { get; set; }
+        [Required]
+        public string JobDescription { get; set; } = null!;
+
         public string? Location { get; set; }
         public string? Notes { get; set; }
 

@@ -15,13 +15,14 @@ namespace Job_Application_Web.DTOs.JobApplications
         public string CompanyName { get; set; } = null!;
         [Required]
         public string JobTitle { get; set; } = null!;
+        [Required]
+        public string JobDescription { get; set; } = null!;
 
-        public string? JobDescription { get; set; }
         public string? Location { get; set; }
         public string? Notes { get; set; }
 
         public EmploymentType EmploymentType { get; set; }
         public WorkMode WorkMode { get; set; }
-        public ApplicationStatus Status { get; set; } = ApplicationStatus.Saved;
+        public ApplicationStatus Status { get; set; } = ApplicationStatus.Applied;
     }
 }

@@ -119,3 +119,4 @@ C:\Users\blvck\AGiang\C#\JobApplicationWebAndExtension\Job Application Web\obj\D
 C:\Users\blvck\AGiang\C#\JobApplicationWebAndExtension\Job Application Web\obj\Debug\net8.0\Job Application Web.pdb
 C:\Users\blvck\AGiang\C#\JobApplicationWebAndExtension\Job Application Web\obj\Debug\net8.0\Job Application Web.genruntimeconfig.cache
 C:\Users\blvck\AGiang\C#\JobApplicationWebAndExtension\Job Application Web\obj\Debug\net8.0\ref\Job Application Web.dll
+C:\Users\blvck\AGiang\C#\JobApplicationWebAndExtension\Job Application Web\obj\Debug\net8.0\Job Application Web.sourcelink.json
