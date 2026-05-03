@@ -66,14 +66,19 @@ namespace Job_Application_Web.Services
             if (group == null)
                 return null;
 
-            if (dto.Name != null)
-                group.Name = dto.Name;
+            //if (dto.Name != null)
+            //    group.Name = dto.Name;
 
-            if (dto.Description != null)
-                group.Description = dto.Description;
+            //if (dto.Description != null)
+            //    group.Description = dto.Description;
 
-            if (dto.Color != null)
-                group.Color = dto.Color;
+            //if (dto.Color != null)
+            //    group.Color = dto.Color;
+
+            // Same usage as above
+            group.Name = dto.Name ?? group.Name;
+            group.Description = dto.Description ?? group.Description;
+            group.Color = dto.Color ?? group.Color;
 
             await _context.SaveChangesAsync();
 

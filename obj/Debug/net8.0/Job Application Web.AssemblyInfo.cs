@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Job Application Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60b4b17175eeee067b3b35339ae5f4cdd70a88e5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+218c90ac45e13d797c093f54f6d456ce9d264780")]
 [assembly: System.Reflection.AssemblyProductAttribute("Job Application Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Job Application Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
