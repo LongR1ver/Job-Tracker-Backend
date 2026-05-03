@@ -6,11 +6,11 @@ namespace Job_Application_Web.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class ApplicationGroupsController : ControllerBase
+    public class ApplicationGroupController : ControllerBase
     {
         private readonly IApplicationGroupService _applicationGroupService;
 
-        public ApplicationGroupsController(IApplicationGroupService applicationGroupService)
+        public ApplicationGroupController(IApplicationGroupService applicationGroupService)
         {
             _applicationGroupService = applicationGroupService;
         }
@@ -28,7 +28,7 @@ namespace Job_Application_Web.Controllers
             var group = await _applicationGroupService.GetByIdAsync(id);
 
             if (group == null)
-                return NotFound();
+                return NotFound(new { message = "Application group not found." });
 
             return Ok(group);
         }

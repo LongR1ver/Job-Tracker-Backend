@@ -22,7 +22,8 @@ namespace Job_Application_Web.Services
                 {
                     Id = g.Id,
                     Name = g.Name,
-                    Description = g.Description
+                    Description = g.Description,
+                    Color = g.Color
                 })
                 .ToListAsync();
         }
@@ -35,9 +36,10 @@ namespace Job_Application_Web.Services
                 {
                     Id = g.Id,
                     Name = g.Name,
-                    Description = g.Description
+                    Description = g.Description,
+                    Color = g.Color
                 })
-                .FirstOrDefaultAsync();
+                .FirstOrDefaultAsync(); // Can also use SingleOrDefaultAsync()
         }
 
         public async Task<ApplicationGroupDto> CreateAsync(CreateApplicationGroupDto dto)
@@ -45,7 +47,8 @@ namespace Job_Application_Web.Services
             var group = new ApplicationGroup
             {
                 Name = dto.Name,
-                Description = dto.Description
+                Description = dto.Description,
+                Color = dto.Color
             };
 
             _context.ApplicationGroups.Add(group);
@@ -55,7 +58,8 @@ namespace Job_Application_Web.Services
             {
                 Id = group.Id,
                 Name = group.Name,
-                Description = group.Description
+                Description = group.Description,
+                Color = group.Color
             };
         }
 
