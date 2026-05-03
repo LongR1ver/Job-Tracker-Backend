@@ -23,7 +23,8 @@ namespace Job_Application_Web.Services
                     Id = g.Id,
                     Name = g.Name,
                     Description = g.Description,
-                    Color = g.Color
+                    Color = g.Color,
+                    JobApplicationCount = g.JobApplications.Count
                 })
                 .ToListAsync();
         }
@@ -37,7 +38,8 @@ namespace Job_Application_Web.Services
                     Id = g.Id,
                     Name = g.Name,
                     Description = g.Description,
-                    Color = g.Color
+                    Color = g.Color,
+                    JobApplicationCount = g.JobApplications.Count
                 })
                 .FirstOrDefaultAsync(); // Can also use SingleOrDefaultAsync()
         }

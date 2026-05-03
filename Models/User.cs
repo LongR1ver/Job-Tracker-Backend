@@ -16,6 +16,7 @@ namespace Job_Application_Web.Models
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedAt { get; set; }
 
+        public ICollection<RefreshToken> RefreshTokens { get; set; } = new List<RefreshToken>();
         public ICollection<ApplicationGroup> ApplicationGroups { get; set; } = new List<ApplicationGroup>();
         public ICollection<JobApplication> JobApplications { get; set; } = new List<JobApplication>();
     }

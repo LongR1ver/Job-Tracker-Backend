@@ -11,6 +11,7 @@ namespace Job_Application_Web.Data
         }
 
         public DbSet<User> Users => Set<User>();
+        public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
         public DbSet<ApplicationGroup> ApplicationGroups => Set<ApplicationGroup>();
         public DbSet<JobApplication> JobApplications => Set<JobApplication>();
         public DbSet<ApplicationStatusHistory> ApplicationStatusHistories => Set<ApplicationStatusHistory>();
@@ -38,6 +39,13 @@ namespace Job_Application_Web.Data
             modelBuilder.Entity<User>()
                 .Property(u => u.PasswordHash)
                 .IsRequired();
+
+            // RefreshToken
+            modelBuilder.Entity<RefreshToken>()
+                .HasOne(rt => rt.User)
+                .WithMany(u => u.RefreshTokens)
+                .HasForeignKey(rt => rt.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             // ApplicationGroup
             modelBuilder.Entity<ApplicationGroup>()

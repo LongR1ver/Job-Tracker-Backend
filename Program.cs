@@ -26,6 +26,7 @@ builder.Services.AddCors(options =>
     });
 });
 
+builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IApplicationGroupService, ApplicationGroupService>();
 
 var app = builder.Build();
